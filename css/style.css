@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Berlin Sans FB;
+}
+
+.navLinks{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(27, 24, 24);
+    width: 20%;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    position: relative;
+    left: -16.5%;
+    transition-duration: 0.67s;
+}
+.navLinks.active{
+   left: 0;
+    
+}
+
+.navLinks ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.navIcon{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+
+}
+
+.navIcon .first-line,
+.second-line,
+.third-line{
+position: relative;
+ width: 30px;
+ height: 5px;
+ background: white;
+ display: inline-block;
+ border-radius: 10px;
+ transition-duration: 0.5s;
+}
+
+.navIcon.active .first-line{
+    transform: rotate(45deg);
+    top: 1%;
+}
+.navIcon.active .second-line{
+    transform: rotate(-45deg);
+}
+.navIcon.active .third-line{
+    transform: rotate(-136deg);
+    top: -11px;
+}
